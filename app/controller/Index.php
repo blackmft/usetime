@@ -23,7 +23,6 @@ class Index extends BaseController
     {
         $paramsArr = request()->param('params');
         $data = $paramsArr['data'];
-        Log::record('接收的参数信息：' . json_encode($data));
         $name = $data['name'];
         $city = $data['city'];
         $ip = $_SERVER['REMOTE_ADDR'];
