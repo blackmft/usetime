@@ -21,7 +21,8 @@ class Index extends BaseController
      */
     public function saveInfo()
     {
-        $data = request()->param('data');
+        $paramsArr = request()->param('params');
+        $data = $paramsArr['data'];
         Log::record('接收的参数信息：' . $data);
         $data = json_decode($data,true);
         $name = $data['name'];
