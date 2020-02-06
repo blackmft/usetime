@@ -16,14 +16,6 @@ class Index extends BaseController
     {
         return 'hello,' . $name;
     }
-
-    public function initialize()
-    {
-        header('Access-Control-Allow-Origin: *');
-        header('Access-Control-Allow-Credentials: true');
-        header('Access-Control-Allow-Methods: POST, GET');
-    }
-
     /**
      * 保存提交的时间信息
      */
@@ -58,12 +50,12 @@ class Index extends BaseController
             'name' => $name,
             'city' => $city,
             'ip' => $ip,
-            'phonetime' => $phoneTime,
-            'tvtime' => $tvTime,
-            'gametime' => $gameTime,
-            'sporttime' => $sportTime,
-            'studytime' => $studyTime,
-            'sleeptime' => $sleepTime,
+            'phonetime' => $phoneTime * 10,
+            'tvtime' => $tvTime * 10,
+            'gametime' => $gameTime * 10,
+            'sporttime' => $sportTime * 10,
+            'studytime' => $studyTime * 10,
+            'sleeptime' => $sleepTime * 10,
             'outtime' => $outTime,
             'createtime' => date('Y-m-d H:i:s')
         ];

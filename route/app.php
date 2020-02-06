@@ -10,6 +10,10 @@
 // +----------------------------------------------------------------------
 use think\facade\Route;
 
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, GET');
+header('Access-Control-Allow-Headers:Content-Type,accept');
+
 Route::get('think', function () {
     return 'hello,ThinkPHP6!';
 });
