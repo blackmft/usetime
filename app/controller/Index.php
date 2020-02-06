@@ -30,6 +30,8 @@ class Index extends BaseController
     public function saveInfo()
     {
         $data = request()->param('data');
+        Log::record('接收的参数信息：' . $data);
+        $data = json_decode($data,true);
         $name = $data['name'];
         $city = $data['city'];
         $ip = $_SERVER['REMOTE_ADDR'];
