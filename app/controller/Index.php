@@ -3,6 +3,7 @@ namespace app\controller;
 
 use app\BaseController;
 use app\model\TimeDetail;
+use app\model\Visit;
 use think\Log;
 
 class Index extends BaseController
@@ -76,21 +77,21 @@ class Index extends BaseController
         $insertData = [];
         $insertData['ip'] = $_SERVER['REMOTE_ADDR'];
         $insertData['createtime'] = date('Y-m-d H:i:s');
-        TimeDetail::create($insertData);
+        Visit::create($insertData);
 
         $res = [];
         $res['code'] = 1;
         $res['msg'] = 'success';
         $result = [];
-        $result['time'] = '2020-02-05 13:00:00';
-        $result['total'] = 1000000;
-        $result['sleepTime'] = 100;
-        $result['phoneTime'] = 90;
-        $result['tvTime'] = 70;
-        $result['studyTime'] = 60;
+        $result['time'] = '02-09 18:00';
+        $result['total'] = 8693;
+        $result['sleepTime'] = 40.3;
+        $result['phoneTime'] = 34.7;
+        $result['tvTime'] = 14.1;
+        $result['studyTime'] = 7.7;
         //$result['gameTime'] = 40;
-        $result['sportTime'] = 20;
-        $result['outTime'] = 5;
+        $result['sportTime'] = 3.1;
+        $result['outTime'] = 0.1;
         $res['data'] = $result;
         return json_encode($res);
     }
