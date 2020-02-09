@@ -73,6 +73,11 @@ class Index extends BaseController
 
     public function getInfo()
     {
+        $insertData = [];
+        $insertData['ip'] = $_SERVER['REMOTE_ADDR'];
+        $insertData['createtime'] = date('Y-m-d H:i:s');
+        TimeDetail::create($insertData);
+
         $res = [];
         $res['code'] = 1;
         $res['msg'] = 'success';
