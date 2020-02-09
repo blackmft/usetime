@@ -28,7 +28,7 @@ class Index extends BaseController
         $ip = $_SERVER['REMOTE_ADDR'];
         $phoneTime = $data['phoneTime'];
         $tvTime = $data['tvTime'];
-        $gameTime = $data['gameTime'];
+        //$gameTime = $data['gameTime'];
         $sportTime = $data['sportTime'];
         $studyTime = $data['studyTime'];
         $sleepTime = $data['sleepTime'];
@@ -51,7 +51,7 @@ class Index extends BaseController
             'ip' => $ip,
             'phonetime' => $phoneTime * 10,
             'tvtime' => $tvTime * 10,
-            'gametime' => $gameTime * 10,
+            //'gametime' => $gameTime * 10,
             'sporttime' => $sportTime * 10,
             'studytime' => $studyTime * 10,
             'sleeptime' => $sleepTime * 10,
@@ -83,7 +83,7 @@ class Index extends BaseController
         $result['phoneTime'] = 90;
         $result['tvTime'] = 70;
         $result['studyTime'] = 60;
-        $result['gameTime'] = 40;
+        //$result['gameTime'] = 40;
         $result['sportTime'] = 20;
         $result['outTime'] = 5;
         $res['data'] = $result;
